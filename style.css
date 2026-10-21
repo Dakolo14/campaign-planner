@@ -374,6 +374,15 @@ body {
   background-color: #fff1f2;
 }
 
+.row-weekend-carry td {
+  background-color: #f8fafc;
+}
+
+.row-weekend-carry .cell-date {
+  color: #64748b;
+  font-style: italic;
+}
+
 .cell-date {
   font-weight: var(--font-weight-medium);
   color: #0f172a;
