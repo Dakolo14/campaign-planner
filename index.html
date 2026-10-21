@@ -27,7 +27,8 @@
       <div class="header-actions">
         <div class="quick-stats">
           <span class="stat-pill"><span class="dot live"></span> November 1st - 30th</span>
-          <span class="stat-pill">7 Featured Brands</span>
+          <span class="stat-pill">8 Featured Brands</span>
+          <span class="stat-pill">MamaHomez Added</span>
         </div>
         <button class="btn-export" onclick="window.print()">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
@@ -70,6 +71,7 @@
             <button class="filter-chip active" data-filter="all">All Days</button>
             <button class="filter-chip" data-filter="platinum">Platinum</button>
             <button class="filter-chip" data-filter="gold">Gold</button>
+            <button class="filter-chip" data-filter="brandday">Brand Day</button>
             <button class="filter-chip" data-filter="event">Special Events</button>
           </div>
         </div>
@@ -221,12 +223,12 @@
                   <td><span class="tier-badge tier-gold">Gold</span></td>
                   <td>Brand Day Active</td>
                 </tr>
-                <tr data-tier="gold">
+                <tr data-tier="brandday">
                   <td class="cell-date">Nov 20</td>
                   <td>Friday</td>
                   <td><span class="brand-tag brand-guinness">Guinness</span></td>
                   <td><span class="brand-tag brand-guinness">Guinness</span></td>
-                  <td><span class="tier-badge tier-brandday">Brand Day</span></td>
+                  <td><span class="tier-badge tier-brandday">Brand Day Package</span></td>
                   <td>Beverage Special Takeover</td>
                 </tr>
                 <tr data-tier="platinum">
@@ -341,6 +343,14 @@
                   <span class="count-val">2 &hellip; 2 Slots</span>
                 </div>
                 <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-mamahomez-dot"></span>MamaHomez</span>
+                  <span class="count-val">1 Day Takeover <span class="badge-brandday-pill">Brand Day Pkg</span></span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-guinness-dot"></span>Guinness</span>
+                  <span class="count-val">Nov 20 Takeover <span class="badge-brandday-pill">Brand Day Pkg</span></span>
+                </div>
+                <div class="count-item">
                   <span class="count-brand"><span class="color-dot brand-nivea-dot"></span>Nivea</span>
                   <span class="count-val">1 &hellip; 1 Slot <span class="badge-silver">Silver Pkg</span></span>
                 </div>
@@ -364,7 +374,8 @@
           <div class="legend-group">
             <span class="legend-item"><span class="color-box col-purple"></span> Platinum Tier</span>
             <span class="legend-item"><span class="color-box col-amber"></span> Gold Tier</span>
-            <span class="legend-item"><span class="color-box col-blue"></span> FMCG / Special</span>
+            <span class="legend-item"><span class="color-box col-orange"></span> Brand Day Package</span>
+            <span class="legend-item"><span class="color-box col-silver"></span> Silver Package</span>
           </div>
         </div>
 
@@ -484,10 +495,70 @@
                   <td class="num-cell total-cell">20</td>
                 </tr>
 
+                <tr class="brand-row-highlight row-mamahomez">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-orange"></span>
+                    <strong>MAMAHOMEZ</strong>
+                    <span class="badge-brandday-pill">Brand Day Package</span>
+                  </td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">—</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell total-cell brandday-note">Brand Day Pkg</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-guinness">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-orange"></span>
+                    <strong>GUINNESS</strong>
+                    <span class="badge-brandday-pill">Brand Day Package</span>
+                  </td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">—</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell total-cell brandday-note">Brand Day Pkg</td>
+                </tr>
+
                 <tr class="brand-row-highlight row-carrier">
                   <td class="brand-name-cell sticky-col">
                     <span class="badge-square bg-cyan"></span>
                     <strong>CARRIER &amp; MEL</strong>
+                    <span class="badge-silver-pill">Silver Package</span>
+                  </td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell total-cell silver-note">Silver Tier</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-nivea">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-blue"></span>
+                    <strong>NIVEA</strong>
                     <span class="badge-silver-pill">Silver Package</span>
                   </td>
                   <td class="num-cell text-muted">—</td>
@@ -513,8 +584,8 @@
               <p>Top strip, homepage takeovers and push notifications are heavily weighted towards Platinum partners (Samsung &amp; Shark Ninja).</p>
             </div>
             <div class="insight-card">
-              <h4>Audio & Video Channels</h4>
-              <p><strong>Sell It in 60</strong> (video show) and <strong>Search Ads</strong> are exclusive to Platinum tier sponsors.</p>
+              <h4>Brand Day Package (MamaHomez &amp; Guinness)</h4>
+              <p><strong>MamaHomez</strong> and <strong>Guinness</strong> are confirmed on the <strong>Brand Day Package</strong>, receiving dedicated brand day takeovers, top strip presence on their scheduled day, category placement, and newsletters.</p>
             </div>
             <div class="insight-card">
               <h4>Silver Package Partners (Carrier &amp; Nivea)</h4>
@@ -540,8 +611,9 @@
           <div class="sku-summary-pill"><span class="badge-dot dot-blue"></span> <strong>Samsung:</strong> 3 Target SKUs</div>
           <div class="sku-summary-pill"><span class="badge-dot dot-gray"></span> <strong>LG:</strong> 4 Target SKUs</div>
           <div class="sku-summary-pill"><span class="badge-dot dot-red"></span> <strong>Zinox:</strong> 8 Target SKUs</div>
-          <div class="sku-summary-pill"><span class="badge-dot dot-green"></span> <strong>Nivea:</strong> 4 Target SKUs</div>
-          <div class="sku-summary-pill"><span class="badge-dot dot-cyan"></span> <strong>Carrier & Mel:</strong> 4 Target SKUs</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-orange"></span> <strong>MamaHomez:</strong> Brand Day Pkg</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-green"></span> <strong>Nivea:</strong> 4 Target SKUs (Silver)</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-cyan"></span> <strong>Carrier &amp; Mel:</strong> 4 Target SKUs (Silver)</div>
         </div>
 
         <div class="table-card">
