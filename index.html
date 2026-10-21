@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konga Yakata (Black Friday) Campaign Planner</title>
+  <!-- Google Fonts: Poppins (300 light, 400 regular, 500 medium, 600 semi-bold) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Header with Official Logo -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-wrapper">
+          <img src="logo.png" alt="Konga Yakata Logo" class="brand-logo-img">
+        </div>
+        <div class="header-titles">
+          <h1>Yakata Black Friday Campaign Planner</h1>
+          <p class="subtitle">November 2026 Brand Days, Placements, Deliverables & SKU Matrix</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="quick-stats">
+          <span class="stat-pill"><span class="dot live"></span> November 1st - 30th</span>
+          <span class="stat-pill">7 Featured Brands</span>
+        </div>
+        <button class="btn-export" onclick="window.print()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
+          Print / Export
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs (3 Sheets) -->
+    <nav class="sheet-tabs" role="tablist">
+      <button class="tab-btn active" role="tab" aria-selected="true" data-tab="schedule">
+        <span class="tab-index">1</span>
+        <span class="tab-label">Master Brand Schedule</span>
+        <span class="tab-badge">Timeline & Tiers</span>
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="deliverables">
+        <span class="tab-index">2</span>
+        <span class="tab-label">Deliverables & Placements</span>
+        <span class="tab-badge">Asset Matrix</span>
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="skus">
+        <span class="tab-index">3</span>
+        <span class="tab-label">Brand Day SKU Mapping</span>
+        <span class="tab-badge">Product IDs</span>
+      </button>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content-wrapper">
+
+      <!-- ================= TAB 1: MASTER SCHEDULE ================= -->
+      <section id="schedule" class="tab-pane active" role="tabpanel">
+        <div class="section-toolbar">
+          <div class="toolbar-title-group">
+            <h2>Master Campaign Schedule & Brand Tiering</h2>
+            <span class="toolbar-desc">Daily breakdown of brand takeovers, special events, tiers and strip positioning.</span>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-chip active" data-filter="all">All Days</button>
+            <button class="filter-chip" data-filter="platinum">Platinum</button>
+            <button class="filter-chip" data-filter="gold">Gold</button>
+            <button class="filter-chip" data-filter="event">Special Events</button>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table" id="table-schedule">
+              <thead>
+                <tr>
+                  <th style="width: 130px;">Date</th>
+                  <th style="width: 120px;">Day</th>
+                  <th>Primary Brand Day</th>
+                  <th>Top Strip Brand</th>
+                  <th style="width: 160px;">Tier / Event Type</th>
+                  <th style="width: 190px;">Status / Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-nobrand">
+                  <td class="cell-date">Nov 2</td>
+                  <td>Monday</td>
+                  <td><span class="pill pill-muted">NO BRAND</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 3</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Homepage Takeover</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 4</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-asus">ASUS</span></td>
+                  <td><span class="brand-tag brand-asus">ASUS</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 5</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Top Strip Rotation</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 6</td>
+                  <td>Friday</td>
+                  <td><span class="brand-tag brand-anker">Anker</span></td>
+                  <td><span class="brand-tag brand-anker">Anker</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 7</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Top Strip Only</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 9</td>
+                  <td>Monday</td>
+                  <td><span class="brand-tag brand-lg">LG</span></td>
+                  <td><span class="brand-tag brand-lg">LG</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 10</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-zinox">Zinox</span></td>
+                  <td><span class="brand-tag brand-zinox">Zinox</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 11</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Top Strip Rotation</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 12</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr class="row-event" data-tier="event">
+                  <td class="cell-date">Nov 13</td>
+                  <td>Friday</td>
+                  <td colspan="2" class="cell-highlight-event">
+                    <div class="event-banner">
+                      <span class="event-icon">🎯</span>
+                      <strong>Treasure Hunt</strong>
+                      <span class="event-tag">Major Activation</span>
+                    </div>
+                  </td>
+                  <td><span class="tier-badge tier-event">Special Event</span></td>
+                  <td>Sitewide Flash Clues</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 14</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Top Strip Only</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 16</td>
+                  <td>Monday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 17</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-anker">Anker</span></td>
+                  <td><span class="brand-tag brand-anker">Anker</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 18</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 19</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-asus">ASUS</span></td>
+                  <td><span class="brand-tag brand-asus">ASUS</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 20</td>
+                  <td>Friday</td>
+                  <td><span class="brand-tag brand-guinness">Guinness</span></td>
+                  <td><span class="brand-tag brand-guinness">Guinness</span></td>
+                  <td><span class="tier-badge tier-brandday">Brand Day</span></td>
+                  <td>Beverage Special Takeover</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 21</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Top Strip Only</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 23</td>
+                  <td>Monday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 24</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-zinox">Zinox</span></td>
+                  <td><span class="brand-tag brand-zinox">Zinox</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 25</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr data-tier="gold">
+                  <td class="cell-date">Nov 26</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-lg">LG</span></td>
+                  <td><span class="brand-tag brand-lg">LG</span></td>
+                  <td><span class="tier-badge tier-gold">Gold</span></td>
+                  <td>Brand Day Active</td>
+                </tr>
+                <tr class="row-event row-yakata" data-tier="event">
+                  <td class="cell-date">Nov 27</td>
+                  <td>Friday</td>
+                  <td colspan="2" class="cell-highlight-yakata">
+                    <div class="event-banner yakata-banner">
+                      <span class="event-icon">🔥</span>
+                      <strong>YAKATA BLACK FRIDAY</strong>
+                      <span class="event-tag event-tag-fire">Peak Mega Event</span>
+                    </div>
+                  </td>
+                  <td><span class="tier-badge tier-yakata">Yakata Grand Day</span></td>
+                  <td>Full Sitewide Mega Sale</td>
+                </tr>
+                <tr data-tier="platinum">
+                  <td class="cell-date">Nov 28</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
+                  <td>Top Strip Only</td>
+                </tr>
+                <tr class="row-nobrand">
+                  <td class="cell-date">Nov 30</td>
+                  <td>Monday</td>
+                  <td><span class="pill pill-muted">NO BRAND</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Bottom Summary Cards from Sheet 1 -->
+          <div class="sheet-footer-section">
+            <div class="footer-alert-card">
+              <div class="alert-icon">💡</div>
+              <div class="alert-content">
+                <strong>Top Strip Rotation Rule:</strong>
+                <p>Samsung and Shark Ninja occupy the Top Strip position alternatively across the campaign calendar.</p>
+                <div class="mini-note-tag">Note: We are to infuse a brand day for additional slots as confirmed.</div>
+              </div>
+            </div>
+
+            <div class="summary-counts-card">
+              <h3>Brand Slot Allocations Summary</h3>
+              <div class="counts-grid">
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-shark-dot"></span>Shark Ninja</span>
+                  <span class="count-val">4 &hellip; 6 Slots</span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-samsung-dot"></span>Samsung</span>
+                  <span class="count-val">4 &hellip; 6 Slots</span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-zinox-dot"></span>Zinox</span>
+                  <span class="count-val">2 &hellip; 2 Slots</span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-lg-dot"></span>LG</span>
+                  <span class="count-val">2 &hellip; 2 Slots</span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-anker-dot"></span>Anker</span>
+                  <span class="count-val">2 &hellip; 2 Slots</span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-asus-dot"></span>ASUS</span>
+                  <span class="count-val">2 &hellip; 2 Slots</span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-nivea-dot"></span>Nivea</span>
+                  <span class="count-val">1 &hellip; 1 Slot <span class="badge-silver">Silver Pkg</span></span>
+                </div>
+                <div class="count-item">
+                  <span class="count-brand"><span class="color-dot brand-cyan-dot"></span>Carrier &amp; Mel</span>
+                  <span class="count-val">Catalog SKUs <span class="badge-silver">Silver Pkg</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 2: DELIVERABLES & PLACEMENTS ================= -->
+      <section id="deliverables" class="tab-pane" role="tabpanel">
+        <div class="section-toolbar">
+          <div class="toolbar-title-group">
+            <h2>Media Placements & Deliverables Breakdown</h2>
+            <span class="toolbar-desc">Breakdown of promotional channels, digital assets, and frequencies committed per brand.</span>
+          </div>
+          <div class="legend-group">
+            <span class="legend-item"><span class="color-box col-purple"></span> Platinum Tier</span>
+            <span class="legend-item"><span class="color-box col-amber"></span> Gold Tier</span>
+            <span class="legend-item"><span class="color-box col-blue"></span> FMCG / Special</span>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table deliverables-table">
+              <thead>
+                <tr>
+                  <th class="sticky-col">Brand</th>
+                  <th>Homepage Takeover</th>
+                  <th>Top Strip</th>
+                  <th>Platinum</th>
+                  <th>Category</th>
+                  <th>Newsletter</th>
+                  <th>Push Notifications</th>
+                  <th>Sell It in 60</th>
+                  <th>Hot Picks</th>
+                  <th>Konga FM</th>
+                  <th>Search Ads</th>
+                  <th>Sponsored Posts</th>
+                  <th>Total Units</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="brand-row-highlight row-shark-ninja">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-purple"></span>
+                    <strong>SHARK NINJA</strong>
+                  </td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell highlight-cell">2</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell highlight-cell">1</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell total-cell">30</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-lg">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-amber"></span>
+                    <strong>LG</strong>
+                  </td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell total-cell">20</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-samsung">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-amber"></span>
+                    <strong>SAMSUNG</strong>
+                  </td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell highlight-cell">2</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell highlight-cell">1</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell total-cell">30</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-asus">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-amber"></span>
+                    <strong>ASUS</strong>
+                  </td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell total-cell">20</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-anker">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-amber"></span>
+                    <strong>ANKER</strong>
+                  </td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">4</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell total-cell">20</td>
+                </tr>
+
+                <tr class="brand-row-highlight row-carrier">
+                  <td class="brand-name-cell sticky-col">
+                    <span class="badge-square bg-cyan"></span>
+                    <strong>CARRIER &amp; MEL</strong>
+                    <span class="badge-silver-pill">Silver Package</span>
+                  </td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell text-muted">—</td>
+                  <td class="num-cell total-cell silver-note">Silver Tier</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="deliverables-insights-grid">
+            <div class="insight-card">
+              <h4>High-Impact Placements</h4>
+              <p>Top strip, homepage takeovers and push notifications are heavily weighted towards Platinum partners (Samsung &amp; Shark Ninja).</p>
+            </div>
+            <div class="insight-card">
+              <h4>Audio & Video Channels</h4>
+              <p><strong>Sell It in 60</strong> (video show) and <strong>Search Ads</strong> are exclusive to Platinum tier sponsors.</p>
+            </div>
+            <div class="insight-card">
+              <h4>Silver Package Partners (Carrier &amp; Nivea)</h4>
+              <p><strong>Carrier &amp; Mel</strong> and <strong>Nivea</strong> subscribed to the <strong>Silver Package</strong>, focusing strictly on target catalog SKU promotions and targeted category listings rather than major homepage takeovers/strips.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 3: BRAND DAY SKU MAPPING ================= -->
+      <section id="skus" class="tab-pane" role="tabpanel">
+        <div class="section-toolbar">
+          <div class="toolbar-title-group">
+            <h2>Brand Day Product SKU Mapping</h2>
+            <span class="toolbar-desc">Exact inventory and catalog SKUs scheduled for promotion on corresponding brand days.</span>
+          </div>
+          <div class="search-box-wrap">
+            <input type="text" id="sku-search" class="search-input" placeholder="Search by Brand or SKU ID...">
+          </div>
+        </div>
+
+        <div class="sku-cards-overview">
+          <div class="sku-summary-pill"><span class="badge-dot dot-blue"></span> <strong>Samsung:</strong> 3 Target SKUs</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-gray"></span> <strong>LG:</strong> 4 Target SKUs</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-red"></span> <strong>Zinox:</strong> 8 Target SKUs</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-green"></span> <strong>Nivea:</strong> 4 Target SKUs</div>
+          <div class="sku-summary-pill"><span class="badge-dot dot-cyan"></span> <strong>Carrier & Mel:</strong> 4 Target SKUs</div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table" id="table-skus">
+              <thead>
+                <tr>
+                  <th style="width: 130px;">Date</th>
+                  <th style="width: 120px;">Day</th>
+                  <th style="width: 220px;">Brand Day</th>
+                  <th>Designated SKU(s)</th>
+                  <th style="width: 110px;">SKU Count</th>
+                  <th style="width: 120px;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-date">Nov 2</td>
+                  <td>Monday</td>
+                  <td><span class="pill pill-muted">NO BRAND</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td>0</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 3</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('7022754')">7022754</span>
+                      <span class="sku-tag" onclick="copySku('7022755')">7022755</span>
+                      <span class="sku-tag" onclick="copySku('7022753')">7022753</span>
+                    </div>
+                  </td>
+                  <td>3 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('7022754, 7022755, 7022753')">Copy</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 4</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-asus">ASUS</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 5</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 6</td>
+                  <td>Friday</td>
+                  <td><span class="brand-tag brand-anker">Anker</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 7</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 9</td>
+                  <td>Monday</td>
+                  <td><span class="brand-tag brand-lg">LG</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('6822722')">6822722</span>
+                      <span class="sku-tag" onclick="copySku('6711192')">6711192</span>
+                      <span class="sku-tag" onclick="copySku('6950337')">6950337</span>
+                      <span class="sku-tag" onclick="copySku('6711207')">6711207</span>
+                    </div>
+                  </td>
+                  <td>4 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('6822722, 6711192, 6950337, 6711207')">Copy</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 10</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-zinox">Zinox</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('6571253')">6571253</span>
+                      <span class="sku-tag" onclick="copySku('6571275')">6571275</span>
+                      <span class="sku-tag" onclick="copySku('6938392')">6938392</span>
+                    </div>
+                  </td>
+                  <td>3 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('6571253, 6571275, 6938392')">Copy</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 11</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 12</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('7022754')">7022754</span>
+                      <span class="sku-tag" onclick="copySku('7022755')">7022755</span>
+                      <span class="sku-tag" onclick="copySku('7022753')">7022753</span>
+                    </div>
+                  </td>
+                  <td>3 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('7022754, 7022755, 7022753')">Copy</button></td>
+                </tr>
+                <tr class="row-event">
+                  <td class="cell-date">Nov 13</td>
+                  <td>Friday</td>
+                  <td colspan="4">
+                    <span class="event-banner"><span class="event-icon">🎯</span> <strong>Treasure Hunt Event</strong> (Sitewide Promo)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 14</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 16</td>
+                  <td>Monday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 17</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-anker">Anker</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 18</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('7022754')">7022754</span>
+                      <span class="sku-tag" onclick="copySku('7022755')">7022755</span>
+                      <span class="sku-tag" onclick="copySku('7022753')">7022753</span>
+                    </div>
+                  </td>
+                  <td>3 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('7022754, 7022755, 7022753')">Copy</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 19</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-asus">ASUS</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 20</td>
+                  <td>Friday</td>
+                  <td><span class="brand-tag brand-guinness">Guinness</span></td>
+                  <td><span class="text-muted">Beverage Deals & Bundles</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 21</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 23</td>
+                  <td>Monday</td>
+                  <td><span class="brand-tag brand-samsung">Samsung</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('7022754')">7022754</span>
+                      <span class="sku-tag" onclick="copySku('7022755')">7022755</span>
+                      <span class="sku-tag" onclick="copySku('7022753')">7022753</span>
+                    </div>
+                  </td>
+                  <td>3 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('7022754, 7022755, 7022753')">Copy</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 24</td>
+                  <td>Tuesday</td>
+                  <td><span class="brand-tag brand-zinox">Zinox</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('6938391')">6938391</span>
+                      <span class="sku-tag" onclick="copySku('6935937')">6935937</span>
+                      <span class="sku-tag" onclick="copySku('6639741')">6639741</span>
+                      <span class="sku-tag" onclick="copySku('6167818')">6167818</span>
+                    </div>
+                  </td>
+                  <td>4 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('6938391, 6935937, 6639741, 6167818')">Copy</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 25</td>
+                  <td>Wednesday</td>
+                  <td><span class="brand-tag brand-shark">Shark Ninja</span></td>
+                  <td><span class="text-muted">Awaiting SKU submission</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 26</td>
+                  <td>Thursday</td>
+                  <td><span class="brand-tag brand-lg">LG</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('6999047')">6999047</span>
+                      <span class="sku-tag" onclick="copySku('6999046')">6999046</span>
+                      <span class="sku-tag" onclick="copySku('6822683')">6822683</span>
+                      <span class="sku-tag" onclick="copySku('6822726')">6822726</span>
+                    </div>
+                  </td>
+                  <td>4 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('6999047, 6999046, 6822683, 6822726')">Copy</button></td>
+                </tr>
+                <tr class="row-event row-yakata">
+                  <td class="cell-date">Nov 27</td>
+                  <td>Friday</td>
+                  <td colspan="4">
+                    <span class="event-banner yakata-banner"><span class="event-icon">🔥</span> <strong>YAKATA BLACK FRIDAY</strong> (Sitewide Black Friday Mega Deals)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 28</td>
+                  <td>Saturday</td>
+                  <td><span class="text-muted">—</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td>—</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 30</td>
+                  <td>Monday</td>
+                  <td><span class="pill pill-muted">NO BRAND</span></td>
+                  <td><span class="text-muted">—</span></td>
+                  <td>0</td>
+                  <td><span class="text-muted">—</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Bottom Additional SKUs Box -->
+          <div class="additional-skus-container">
+            <h3 class="section-subheading">Silver Package Partner SKU Bundles</h3>
+            <p class="silver-note-desc">Nivea and Carrier &amp; Mel purchased the Silver Package — designated for specific SKU promotions and catalog visibility rather than primary brand takeover days.</p>
+            <div class="addl-grid">
+              <div class="addl-card">
+                <div class="addl-header">
+                  <div class="brand-header-flex">
+                    <span class="brand-tag brand-nivea">Nivea</span>
+                    <span class="badge-silver-pill">Silver Package</span>
+                  </div>
+                  <span class="sku-count-pill">4 SKUs Registered</span>
+                </div>
+                <div class="sku-tag-list">
+                  <span class="sku-tag" onclick="copySku('6947696')">6947696</span>
+                  <span class="sku-tag" onclick="copySku('6948468')">6948468</span>
+                  <span class="sku-tag" onclick="copySku('6948478')">6948478</span>
+                  <span class="sku-tag" onclick="copySku('6948382')">6948382</span>
+                </div>
+                <button class="btn-copy-full" onclick="copyAll('6947696, 6948468, 6948478, 6948382')">Copy All Nivea SKUs</button>
+              </div>
+
+              <div class="addl-card">
+                <div class="addl-header">
+                  <div class="brand-header-flex">
+                    <span class="brand-tag brand-cyan">Carrier &amp; Mel</span>
+                    <span class="badge-silver-pill">Silver Package</span>
+                  </div>
+                  <span class="sku-count-pill">4 SKUs Registered</span>
+                </div>
+                <div class="sku-tag-list">
+                  <span class="sku-tag" onclick="copySku('6967407')">6967407</span>
+                  <span class="sku-tag" onclick="copySku('6890704')">6890704</span>
+                  <span class="sku-tag" onclick="copySku('7066499')">7066499</span>
+                  <span class="sku-tag" onclick="copySku('3950485')">3950485</span>
+                </div>
+                <button class="btn-copy-full" onclick="copyAll('6967407, 6890704, 7066499, 3950485')">Copy All Carrier &amp; Mel SKUs</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Toast Notification for Copy -->
+    <div id="toast" class="toast">SKU copied to clipboard!</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
