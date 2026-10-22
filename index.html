@@ -70,6 +70,7 @@
             <button class="filter-chip active" data-filter="all">All Days</button>
             <button class="filter-chip" data-filter="platinum">Platinum</button>
             <button class="filter-chip" data-filter="gold">Gold</button>
+            <button class="filter-chip" data-filter="silver">Silver</button>
             <button class="filter-chip" data-filter="brandday">Brand Day</button>
             <button class="filter-chip" data-filter="event">Special Events</button>
           </div>
@@ -137,13 +138,13 @@
                   <td><span class="tier-badge tier-platinum">Platinum***</span></td>
                   <td>Top Strip Only (Weekend Part 1)</td>
                 </tr>
-                <tr data-tier="platinum" class="row-weekend-carry">
+                <tr data-tier="silver">
                   <td class="cell-date">Nov 8</td>
                   <td>Sunday</td>
-                  <td><span class="text-muted">—</span></td>
+                  <td><span class="brand-tag brand-nivea">Nivea</span></td>
                   <td><span class="brand-tag brand-samsung">Samsung</span></td>
-                  <td><span class="tier-badge tier-platinum">Platinum***</span></td>
-                  <td>Top Strip Carryover (From Saturday)</td>
+                  <td><span class="tier-badge tier-silver">Silver Package</span></td>
+                  <td>Brand Day Active</td>
                 </tr>
                 <tr data-tier="gold">
                   <td class="cell-date">Nov 9</td>
@@ -806,6 +807,21 @@
                   <td><span class="text-muted">—</span></td>
                   <td>—</td>
                   <td><span class="text-muted">—</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-date">Nov 8</td>
+                  <td>Sunday</td>
+                  <td><span class="brand-tag brand-nivea">Nivea</span></td>
+                  <td>
+                    <div class="sku-tag-list">
+                      <span class="sku-tag" onclick="copySku('6947696')">6947696</span>
+                      <span class="sku-tag" onclick="copySku('6948468')">6948468</span>
+                      <span class="sku-tag" onclick="copySku('6948478')">6948478</span>
+                      <span class="sku-tag" onclick="copySku('6948382')">6948382</span>
+                    </div>
+                  </td>
+                  <td>4 SKUs</td>
+                  <td><button class="btn-copy" onclick="copyAll('6947696, 6948468, 6948478, 6948382')">Copy</button></td>
                 </tr>
                 <tr>
                   <td class="cell-date">Nov 9</td>

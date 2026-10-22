@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
           row.style.display = row.getAttribute('data-tier') === 'platinum' ? '' : 'none';
         } else if (filter === 'gold') {
           row.style.display = row.getAttribute('data-tier') === 'gold' ? '' : 'none';
+        } else if (filter === 'silver') {
+          row.style.display = row.getAttribute('data-tier') === 'silver' ? '' : 'none';
         } else if (filter === 'brandday') {
           row.style.display = row.getAttribute('data-tier') === 'brandday' ? '' : 'none';
         } else if (filter === 'event') {

@@ -461,6 +461,7 @@ body {
 .brand-mamahomez-dot { background: #ff6b00; }
 .brand-guinness-dot { background: #d97706; }
 .brand-midea-dot { background: #008ece; }
+.brand-nivea-dot { background: #1e3a8a; }
 
 .pill {
   display: inline-block;
@@ -586,6 +587,12 @@ body {
 .tier-prep {
   background: #f1f5f9;
   color: #64748b;
+}
+
+.tier-silver {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
 }
 
 /* Event Banners */
