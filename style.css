@@ -429,6 +429,11 @@ body {
   color: #ffffff;
 }
 
+.brand-midea {
+  background: #008ece;
+  color: #ffffff;
+}
+
 .brand-guinness {
   background: #f59e0b;
   color: #78350f;
@@ -451,8 +456,11 @@ body {
 
 .col-orange { background: #ff6b00; }
 .bg-orange { background: #ff6b00; }
+.bg-red { background: #ef4444; }
+.bg-midea { background: #008ece; }
 .brand-mamahomez-dot { background: #ff6b00; }
 .brand-guinness-dot { background: #d97706; }
+.brand-midea-dot { background: #008ece; }
 
 .pill {
   display: inline-block;
