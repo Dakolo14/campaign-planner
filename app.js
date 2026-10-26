@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
           row.style.display = row.getAttribute('data-tier') === 'brandday' ? '' : 'none';
         } else if (filter === 'event') {
           row.style.display = row.getAttribute('data-tier') === 'event' ? '' : 'none';
+        } else if (filter === 'open') {
+          row.style.display = row.getAttribute('data-tier') === 'open' ? '' : 'none';
         }
       });
     });
