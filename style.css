@@ -538,6 +538,19 @@ body {
   margin-left: auto;
 }
 
+.badge-platinum-pill {
+  display: inline-block;
+  font-size: 11px;
+  background: #fdf2f8;
+  color: #be185d;
+  border: 1px solid #fbcfe8;
+  padding: 1px 8px;
+  border-radius: 12px;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
+  margin-left: auto;
+}
+
 .brand-header-flex {
   display: flex;
   align-items: center;
