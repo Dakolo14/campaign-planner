@@ -464,9 +464,15 @@ body {
   color: #ffffff;
 }
 
+.brand-vitali {
+  background: #b91c1c;
+  color: #ffffff;
+}
+
 .col-orange { background: #ff6b00; }
 .bg-orange { background: #ff6b00; }
 .bg-red { background: #ef4444; }
+.bg-vitali { background: #b91c1c; }
 .bg-midea { background: #008ece; }
 .bg-kenwood { background: #dc2626; }
 .bg-emerald { background: #059669; }
@@ -476,6 +482,7 @@ body {
 .brand-nivea-dot { background: #1e3a8a; }
 .brand-kenwood-dot { background: #dc2626; }
 .brand-elepaq-dot { background: #059669; }
+.brand-vitali-dot { background: #b91c1c; }
 
 .pill {
   display: inline-block;
@@ -902,6 +909,7 @@ body {
 .brand-anker-dot { background: #92400e; }
 .brand-asus-dot { background: #0f172a; }
 .brand-nivea-dot { background: #1e3a8a; }
+.brand-vitali-dot { background: #b91c1c; }
 
 /* Sheet 2: Deliverables Table */
 .legend-group {
