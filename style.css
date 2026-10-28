@@ -459,16 +459,23 @@ body {
   color: #ffffff;
 }
 
+.brand-elepaq {
+  background: #059669;
+  color: #ffffff;
+}
+
 .col-orange { background: #ff6b00; }
 .bg-orange { background: #ff6b00; }
 .bg-red { background: #ef4444; }
 .bg-midea { background: #008ece; }
 .bg-kenwood { background: #dc2626; }
+.bg-emerald { background: #059669; }
 .brand-mamahome-dot { background: #ff6b00; }
 .brand-guinness-dot { background: #d97706; }
 .brand-midea-dot { background: #008ece; }
 .brand-nivea-dot { background: #1e3a8a; }
 .brand-kenwood-dot { background: #dc2626; }
+.brand-elepaq-dot { background: #059669; }
 
 .pill {
   display: inline-block;
