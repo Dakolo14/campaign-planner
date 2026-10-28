@@ -662,6 +662,22 @@ body {
   color: #991b1b;
 }
 
+.live-banner {
+  border-color: #f87171;
+  background: #fff5f5;
+}
+
+.live-banner strong {
+  color: #dc2626;
+}
+
+.event-tag-live {
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.5px;
+}
+
 /* Footer & Allocation Summary */
 .sheet-footer-section {
   display: grid;
